@@ -27,7 +27,7 @@ This is purely a demo of Ionic 2 with TypeScript. It is still in development.
 **Note:** Is your build slow? Update `npm` to 3.x: `npm install -g npm`.
 
 
-## Contributing
+##  Contributing
 See [CONTRIBUTING.md](https://github.com/driftyco/ionic-conference-app/blob/master/CONTRIBUTING.md) :tada::+1:
 
 

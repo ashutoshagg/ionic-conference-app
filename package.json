@@ -2,10 +2,6 @@
   "name": "ionic-conference-app",
   "description": "Ionic Conference App",
   "license": "Apache-2.0",
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/driftyco/ionic-conference-app.git"
-  },
   "dependencies": {
     "@angular/common": "2.0.0-rc.4",
     "@angular/compiler": "2.0.0-rc.4",
@@ -39,19 +35,6 @@
     "tslint-ionic-rules": "^0.0.3"
   },
   "cordovaPlugins": [
-    "cordova-plugin-whitelist",
-    {
-      "locator": "https://github.com/VersoSolutions/CordovaClipboard",
-      "id": "com.verso.cordova.clipboard"
-    },
-    {
-      "locator": "https://github.com/apache/cordova-plugin-splashscreen.git",
-      "id": "cordova-plugin-splashscreen"
-    },
-    "cordova-plugin-crosswalk-webview"
-  ],
-  "cordovaPlatforms": [
-    "ios",
-    "android"
+  
   ]
 }

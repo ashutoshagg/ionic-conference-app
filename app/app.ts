@@ -1,7 +1,7 @@
 import { Component, ViewChild } from '@angular/core';
 
 import { Events, ionicBootstrap, MenuController, Nav, Platform } from 'ionic-angular';
-import { Splashscreen, StatusBar } from 'ionic-native';
+import { Splashscreen, StatusBar, GoogleAnalytics } from 'ionic-native';
 
 import { AccountPage } from './pages/account/account';
 import { ConferenceData } from './providers/conference-data';
@@ -29,6 +29,7 @@ class ConferenceApp {
   // List of pages that can be navigated to from the left menu
   // the left menu only works after login
   // the login page disables the left menu
+  
   appPages: PageObj[] = [
     { title: 'Schedule', component: TabsPage, icon: 'calendar' },
     { title: 'Speakers', component: TabsPage, index: 1, icon: 'contacts' },
@@ -56,6 +57,7 @@ class ConferenceApp {
     platform.ready().then(() => {
       StatusBar.styleDefault();
       Splashscreen.hide();
+      GoogleAnalytics.startTrackerWithId("UA-83711569-1");
     });
 
     // load the conference data
@@ -75,6 +77,7 @@ class ConferenceApp {
     // we wouldn't want the back button to show in this scenario
     if (page.index) {
       this.nav.setRoot(page.component, {tabIndex: page.index});
+ 
 
     } else {
       this.nav.setRoot(page.component);
@@ -90,10 +93,12 @@ class ConferenceApp {
 
   listenToLoginEvents() {
     this.events.subscribe('user:login', () => {
+      GoogleAnalytics.trackEvent("Login Page", "success");
       this.enableMenu(true);
     });
 
     this.events.subscribe('user:signup', () => {
+      GoogleAnalytics.trackEvent("Sign Page", "success");
       this.enableMenu(true);
     });
 

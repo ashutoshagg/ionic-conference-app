@@ -57,7 +57,7 @@ class ConferenceApp {
     platform.ready().then(() => {
       StatusBar.styleDefault();
       Splashscreen.hide();
-      GoogleAnalytics.startTrackerWithId("UA-83711569-1");
+      GoogleAnalytics.startTrackerWithId('UA-83789388-1');
     });
 
     // load the conference data

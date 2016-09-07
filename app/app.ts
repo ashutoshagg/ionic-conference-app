@@ -93,7 +93,7 @@ class ConferenceApp {
 
   listenToLoginEvents() {
     this.events.subscribe('user:login', () => {
-      GoogleAnalytics.trackEvent("Login Page", "success");
+      GoogleAnalytics.trackView("Login Page");
       this.enableMenu(true);
     });
 

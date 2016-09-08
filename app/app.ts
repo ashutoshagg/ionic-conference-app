@@ -58,6 +58,7 @@ class ConferenceApp {
       StatusBar.styleDefault();
       Splashscreen.hide();
       GoogleAnalytics.startTrackerWithId('UA-83789388-1');
+      GoogleAnalytics.setUserId("ashutosh aggarwal");
     });
 
     // load the conference data
